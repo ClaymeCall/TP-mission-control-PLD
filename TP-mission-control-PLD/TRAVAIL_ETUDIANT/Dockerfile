@@ -10,8 +10,6 @@ RUN npm ci
 
 COPY . .
 
-
-
 USER app
 
 HEALTHCHECK --interval=5s --timeout=3s --start-period=5s --retries=3 \
