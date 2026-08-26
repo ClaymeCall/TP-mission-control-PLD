@@ -43,6 +43,7 @@ HEALTHCHECK --interval=5s --timeout=3s --start-period=5s --retries=3 \
 
 ## Gate 03 - Continuous Integration
 
+A PR merging this line will trigger the workflow
 - First successful workflow run:
 - Failing pull request run:
 - Fixed pull request run:
