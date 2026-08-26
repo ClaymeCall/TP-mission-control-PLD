@@ -6,6 +6,7 @@ on:
     # Sequence of patterns matched against refs/heads
     branches:
       - main
+        workflow_dispatch:
 
 jobs:
   Flight-Control:
