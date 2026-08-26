@@ -16,10 +16,4 @@ Le dossier `SYSTEME_MISSION_NE_PAS_MODIFIER/` peut être **lu**, mais ne doit pa
 
 Le workflow GitHub attendu par les checks locaux doit être créé exactement ici : `.github/workflows/mission.yml`.
 
-## Optimisation de la masse
-|            | Before | After | After + Cache |
-|------------|--------|-------|---------------|
-| Build time | 11.5s | 10.3s  |      2.5s     |
-| Size       | 371.8MB | 46.7MB |   46,7MB       |
-
 

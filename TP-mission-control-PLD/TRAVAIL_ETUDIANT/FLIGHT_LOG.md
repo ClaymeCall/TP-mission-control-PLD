@@ -10,13 +10,13 @@
 
 | Metric | Baseline | Final | Improvement |
 |---|---:|---:|---:|
-| Image size |  |  |  |
-| Full build time |  |  |  |
-| Code-only rebuild time |  |  |  |
+| Image size | 371.8MB | 46.7MB | -87.4% |
+| Full build time | 11.5s | 10.3s | -1.2s |
+| Code-only rebuild time | 11.5s | 2.5s | -9.0s (cache) |
 
 - Baseline running user:
 - Final running user:
-- What changed and why:
+- What changed and why: nous avons changé l'image de base de `node:20` vers `node:20-alpine` et optimisé le Dockerfile (cache des dépendances via `COPY package*.json` + `npm ci` et ajout de `Dockerfile.dockerignore`) ; la taille de l'image a évolué de 371.8MB à 46.7MB et le temps de rebuild avec cache a évolué de 11.5s à 2.5s.
 
 ## Gate 02 - Container safety
 
