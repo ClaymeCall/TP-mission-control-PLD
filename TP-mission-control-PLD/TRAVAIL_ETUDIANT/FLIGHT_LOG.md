@@ -20,9 +20,26 @@
 
 ## Gate 02 - Container safety
 
-- `docker inspect` health status:
+- `docker inspect` health status: healthy
+```sh
+        "State": {
+            "Status": "running",
+            ...
+            "Health": {
+                "Status": "healthy",
+```
 - Evidence that PID 1 is not root:
+```sh
+    "Config": {
+                "Hostname": "0a8f21db6ad3",
+                "Domainname": "",
+                "User": "app",
+```
 - Healthcheck command used:
+```Dockerfile
+HEALTHCHECK --interval=5s --timeout=3s --start-period=5s --retries=3 \
+    CMD curl -f http://127.0.0.1:3000/health || exit 1
+```
 
 ## Gate 03 - Continuous Integration
 
