@@ -1,10 +1,13 @@
-FROM node:20
+FROM node:20-alpine
 
 WORKDIR /app
 
-COPY . .
+COPY package*.json .
+COPY ../package*.json .
+RUN npm ci
 
-RUN npm install
+COPY . .
+COPY .. .
 
 EXPOSE 3000
 
